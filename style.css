@@ -1,0 +1,126 @@
+/* Reset and general styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Clear Sans", Arial, sans-serif;
+    text-align: center;
+    background-color: #faf8ef;
+    color: #776e65;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    margin: 10px 0;
+    font-size: 24px;
+}
+
+p {
+    font-size: 18px;
+    margin: 15px;
+}
+
+/* Board styling */
+#board {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Adjusted to be responsive */
+    grid-gap: 10px;
+    justify-content: center;
+    max-width: 440px; /* Limit max width for larger screens */
+    margin: 0 auto;
+    background-color: #bbada0;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.tile {
+    width: 100px;
+    height: 100px;
+    background-color: #cdc1b4;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px; /* Adjusted font size for smaller screens */
+    font-weight: bold;
+    color: #776e65;
+}
+
+/* Responsive tile sizes */
+@media (max-width: 600px) {
+    .tile {
+        width: 70px;
+        height: 70px;
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 400px) {
+    .tile {
+        width: 50px;
+        height: 50px;
+        font-size: 25px;
+    }
+}
+
+
+.tile[data-value="2"] {
+    background-color: #eee4da;
+}
+
+.tile[data-value="4"] {
+    background-color: #ede0c8;
+}
+
+.tile[data-value="8"] {
+    background-color: #f2b179;
+    color: #f9f6f2;
+}
+
+.tile[data-value="16"] {
+    background-color: #f59563;
+    color: #f9f6f2;
+}
+
+.tile[data-value="32"] {
+    background-color: #f67c5f;
+    color: #f9f6f2;
+}
+
+.tile[data-value="64"] {
+    background-color: #f65e3b;
+    color: #f9f6f2;
+}
+
+.tile[data-value="128"] {
+    background-color: #edcf72;
+    color: #f9f6f2;
+}
+
+.tile[data-value="256"] {
+    background-color: #edcc61;
+    color: #f9f6f2;
+}
+
+.tile[data-value="512"] {
+    background-color: #edc850;
+    color: #f9f6f2;
+}
+
+.tile[data-value="1024"] {
+    background-color: #edc53f;
+    color: #f9f6f2;
+}
+
+.tile[data-value="2048"] {
+    background-color: #edc22e;
+    color: #f9f6f2;
+}
